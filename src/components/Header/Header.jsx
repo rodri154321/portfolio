@@ -4,7 +4,18 @@ import styles from './Header.module.css';
 import logo from '../../assets/avatarPortfolio.ico';
 
 const Header = ({ activeSection, setActiveSection }) => {
+
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+   useEffect(() => {
+    if (activeSection) {
+      const element = document.getElementById(activeSection);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [activeSection]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -15,19 +26,25 @@ const Header = ({ activeSection, setActiveSection }) => {
     setIsMenuOpen(false);
   };
 
+
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}><img className={styles.logoimg} src={logo} alt="Logo" /></div>
-        
+
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
           <ul className={styles.navList}>
             {['inicio', 'habilidades', 'proyectos', 'contacto'].map((item) => (
               <li key={item}>
-                <a 
+                <a
                   href={`#${item}`}
+                  
                   className={activeSection === item ? styles.active : ''}
-                  onClick={() => handleNavClick(item)}
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevenir el comportamiento por defecto
+                    handleNavClick(item);
+                  }}
                 >
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                 </a>
