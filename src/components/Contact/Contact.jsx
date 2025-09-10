@@ -53,10 +53,10 @@ const Contact = ({ setActiveSection }) => {
                 <i className="fas fa-envelope"></i>
                 <span>rodri154321@gmail.com</span>
               </div>
-              <div className={styles.contactItem}>
+              {/* <div className={styles.contactItem}>
                 <i className="fas fa-phone"></i>
                 <span>+54 351 7560897</span>
-              </div>
+              </div> */}
               <div className={styles.contactItem}>
                 <i className="fas fa-map-marker-alt"></i>
                 <span>Cordoba, Argentina 🇦🇷</span>

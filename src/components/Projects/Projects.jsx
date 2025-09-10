@@ -7,30 +7,30 @@ const Projects = ({ setActiveSection }) => {
   const projects = [
     {
       id: 1,
-      title: "E-commerce React",
-      description: "Plataforma de comercio electrónico con carrito de compras, pasarela de pago y panel de administración.",
-      tags: ["React", "Node.js", "PostgreSQL", "Redux"],
-      category: "fullstack"
+      title: "Aplicacion web para Telefonos",
+      description: "Plataforma de informacion para coro, con informacion y letras de canciones.",
+      tags: ["React", "CSS", "HTML", "JavaScript"],
+      category: "frontend"
     },
     {
       id: 2,
-      title: "App de Tareas",
-      description: "Aplicación para gestión de tareas con funciones de colaboración en tiempo real.",
-      tags: ["React", "Socket.io", "MongoDB", "JWT"],
+      title: "Sistema de inscripcion personalizado a evento",
+      description: "Sistema web que permite la inscripcion y manejo de la informacion de los participantes.",
+      tags: ["React", "CSS", "HTML", "Node.js", "PostgreSQL", "Express", "Sequelize", "API"],
       category: "fullstack"
     },
     {
       id: 3,
-      title: "API RESTful",
-      description: "API robusta para servicio de blogging con autenticación JWT y documentación completa.",
-      tags: ["Node.js", "Express", "PostgreSQL", "Swagger"],
-      category: "backend"
+      title: "Pagina informativa",
+      description: "Pagina informativa de evento",
+      tags: ["React", "CSS", "HTML"],
+      category: "frontend"
     },
     {
       id: 4,
-      title: "Dashboard Analytics",
-      description: "Panel de control con visualización de datos y métricas en tiempo real.",
-      tags: ["React", "D3.js", "Chart.js", "API"],
+      title: "Landing page de laboratorio odontologico",
+      description: "landing page informativa de laboratorio odontologico, con formulario de contacto.",
+      tags: ["React", "CSS", "HTML", "JavaScript", "EmailJS", "SweetAlert2","Swiper"],
       category: "frontend"
     }
   ];
